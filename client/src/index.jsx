@@ -1,6 +1,6 @@
 import React from "react";
 import {render} from "react-dom";
-import NewsItem from "./NewsItem/newsitem";
+import NewsItem from "./newsitem";
 
 const App = () => <div><NewsItem title="Greeting">Hello World</NewsItem></div>;
 
