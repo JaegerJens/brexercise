@@ -1,0 +1,11 @@
+{
+  "name": "brexercise",
+  "version": "1.0.0",
+  "description": "react news app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jens Jaeger",
+  "license": "ISC"
+}
