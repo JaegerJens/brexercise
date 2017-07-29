@@ -25,12 +25,15 @@ const styleSheet = createStyleSheet('SimpleCard', theme => ({
   },
 }));
 
-const NewsItem = ({classes, title, children}) => (
+const NewsItem = ({classes, title, author, children}) => (
     <div>
         <Card className={classes.card}>
             <CardContent>
                 <Typegraphy type="headline" component="h2">
                     {title}
+                </Typegraphy>
+                <Typegraphy type="body1" className={classes.pos}>
+                    Author: {author}
                 </Typegraphy>
                 <Typegraphy component="p">
                     {children}
