@@ -1,8 +1,8 @@
 import React from "react";
 import {render} from "react-dom";
-import NewsItem from "./newsitem";
+import NewsFeed from "./newsfeed";
 
-const App = () => <div><NewsItem title="Greeting">Hello World</NewsItem></div>;
+const App = () => <div><NewsFeed></NewsFeed></div>;
 
 
 render(<App />, document.getElementById("app"));
