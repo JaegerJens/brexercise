@@ -26,7 +26,7 @@ const styleSheet = createStyleSheet('SimpleCard', theme => ({
 }));
 
 const NewsItem = ({classes, news, switchContent}) => {
-    const {title, author, showFull, content} = news;
+    const {title, author, showFull, content, lastModified} = news;
     const onButtonClick = switchContent(news);
     console.log(onButtonClick);
     return <div>
@@ -41,7 +41,7 @@ const NewsItem = ({classes, news, switchContent}) => {
                 }
                 {showFull &&
                 <Typegraphy type="body1" className={classes.pos}>
-                    Author: {author}
+                    Author: {author} ({lastModified})
                 </Typegraphy>
                 }
                 {showFull &&
