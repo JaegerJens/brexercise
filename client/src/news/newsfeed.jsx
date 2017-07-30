@@ -10,14 +10,16 @@ const showContentAction = (newsItem) => ({
     });
 
 const mapDispathToProps = (dispatch) => ({
-    switchContent: (newsItem) => dispatch(showContentAction(newsItem))
+    switchContent: (item) => () => dispatch(showContentAction(item))
 });
 
-const list = (news) => news.map((item) => <NewsItem key={item.id} news={item} />);
+const list = (news, action) => news.map((item) => <NewsItem key={item.id}
+                                            news={item}
+                                            switchContent={action} />);
 
-const NewsFeed = ({news}) => (
+const NewsFeed = ({news, switchContent}) => (
     <div>
-        {list(news)}
+        {list(news, switchContent)}
     </div>
 );
 
