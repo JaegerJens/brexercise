@@ -28,7 +28,6 @@ const styleSheet = createStyleSheet('SimpleCard', theme => ({
 const NewsItem = ({classes, news, switchContent}) => {
     const {title, author, showFull, content, lastModified} = news;
     const onButtonClick = switchContent(news);
-    console.log(onButtonClick);
     return <div>
         <Card className={classes.card}>
             <CardContent>
@@ -46,10 +45,10 @@ const NewsItem = ({classes, news, switchContent}) => {
                     </Typegraphy>
                 }
                 <Button color="primary" className={classes.Button}
-                        onClick={onButtonClick}>{showFull ? "Hide" : "Show"}</Button>
+                    onClick={onButtonClick}>{showFull ? "Hide" : "Show"}</Button>
             </CardContent>
         </Card>
-    </div>
+    </div>;
 };
 
 export default withStyles(styleSheet)(NewsItem);

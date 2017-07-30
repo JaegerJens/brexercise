@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint src",
     "build": "webpack",
     "watch": "webpack --watch"
   },
@@ -23,5 +24,9 @@
     "react-redux": "^5.0.5",
     "redux": "^3.7.2",
     "webpack": "^3.4.1"
+  },
+  "devDependencies": {
+    "eslint": "^4.3.0",
+    "eslint-plugin-react": "^7.1.0"
   }
 }
