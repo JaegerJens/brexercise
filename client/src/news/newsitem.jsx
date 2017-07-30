@@ -35,10 +35,6 @@ const NewsItem = ({classes, news, switchContent}) => {
                 <Typegraphy type="headline" component="h2">
                     {title}
                 </Typegraphy>
-                {!showFull &&
-                    <Button color="primary" className={classes.Button}
-                            onClick={onButtonClick}>Show</Button>
-                }
                 {showFull &&
                 <Typegraphy type="body1" className={classes.pos}>
                     Author: {author} ({lastModified})
@@ -49,10 +45,8 @@ const NewsItem = ({classes, news, switchContent}) => {
                         {content}
                     </Typegraphy>
                 }
-                {showFull &&
-                    <Button color="primary" className={classes.Button}
-                            onClick={onButtonClick}>Hide</Button>
-                }
+                <Button color="primary" className={classes.Button}
+                        onClick={onButtonClick}>{showFull ? "Hide" : "Show"}</Button>
             </CardContent>
         </Card>
     </div>
