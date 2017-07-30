@@ -4,14 +4,16 @@ import NewsItem from "./newsitem";
 
 const mapStateToProps = (state) => state;
 
-const mapDispathToProps = (dispatch) => ({});
+const showContentAction = (newsItem) => ({
+        type: "SHOW_CONTENT",
+        news: newsItem
+    });
 
-const list = (news) => news.map((message) =>
-        <NewsItem key={message.id}
-                  author={message.author}
-                  title={message.title}>
-            {message.content}
-        </NewsItem>);
+const mapDispathToProps = (dispatch) => ({
+    switchContent: (newsItem) => dispatch(showContentAction(newsItem))
+});
+
+const list = (news) => news.map((item) => <NewsItem key={item.id} news={item} />);
 
 const NewsFeed = ({news}) => (
     <div>
