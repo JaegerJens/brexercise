@@ -52,4 +52,7 @@ const feed = [
     }
 ]
 
+// add view property: show news item with full details: default false
+const view = feed.map(item => ({...item, showFull: false}));
+
 export default feed;
