@@ -1,6 +1,6 @@
 import React from 'react';
 import NewsItem from "./newsitem";
-import feed from "./content";
+import feed from "../content";
 
 const list = feed.map((message) => <NewsItem key={message.id}
                                              author={message.author}
