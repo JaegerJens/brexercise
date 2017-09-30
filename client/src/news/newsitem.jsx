@@ -1,10 +1,10 @@
 import React from "react";
-import { withStyles, createStyleSheet } from "material-ui/styles";
+import { withStyles } from "material-ui/styles";
 import Card, { CardContent } from "material-ui/Card";
 import Button from "material-ui/Button";
 import Typegraphy from "material-ui/Typography";
 
-const styleSheet = createStyleSheet("SimpleCard", theme => ({
+const styles = theme => ({
     card: {
         minWidth: 275,
     },
@@ -22,7 +22,7 @@ const styleSheet = createStyleSheet("SimpleCard", theme => ({
         marginBottom: 12,
         color: theme.palette.text.secondary,
     },
-}));
+});
 
 const NewsItem = ({classes, news, switchContent}) => {
     const {title, author, showFull, content, lastModified} = news;
@@ -50,4 +50,4 @@ const NewsItem = ({classes, news, switchContent}) => {
     </div>;
 };
 
-export default withStyles(styleSheet)(NewsItem);
+export default withStyles(styles)(NewsItem);
